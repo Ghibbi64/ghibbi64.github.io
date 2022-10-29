@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -7,33 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcolatrice</title>
     <link rel="stylesheet" href="stile.css">
-    <h1>CALCOLATRICE</h1>
+    <script type="text/javascript" src="main.js"></script>
+
 </head>
 
 
 <body>
-    <button type="button" id="UNO" onclick="function_uno()">1</button>
-    <button type="button" id="DUE" onclick="function_due()">2</button>
-    <button type="button" id="TRE" onclick="function_tre()">3</button>
-    <button type="button" id="QUATTRO" onclick="function_quattro()">4</button><br>
-    <button type="button" id="CINQUE" onclick="function_cinque()">5</button>
-    <button type="button" id="SEI" onclick="function_sei()">6</button>
-    <button type="button" id="SETTE" onclick="function_sette()">7</button>
-    <button type="button" id="OTTO" onclick="function_otto()">8</button><br>
-    <button type="button" id="NOVE" onclick="function_nove()">9</button>
-    <button type="button" id="ZERO" onclick="function_zero()">0</button><br><br><br>
-    <button type="button" id="PER" onclick="function_per()">x</button>
-    <button type="button" id="DIVISO" onclick="function_diviso()">:</button>
-    <button type="button" id="PIU" onclick="function_piu()">+</button>
-    <button type="button" id="MENO" onclick="function_meno()">-</button>
-    <button type="button" id="TOT" onclick="function_tot()">=</button>
-    <button type="button" id="C" onclick="clear_all()">C</button>
-    <br>
-    <br>
-    <input type="text" id="RISULTATO"></input>
-    <script type="text/javascript" src="main.js"></script>
-
+    <div style="text-align:center;width: 400px;margin: 0 auto;border-style: dotted;">
+        <h1>CALCOLATRICE</h1>
+        <button type="button" id="UNO" onclick="function_uno()">1</button>
+        <button type="button" id="DUE" onclick="function_due()">2</button>
+        <button type="button" id="TRE" onclick="function_tre()">3</button>
+        <button type="button" id="QUATTRO" onclick="function_quattro()">4</button><br>
+        <button type="button" id="CINQUE" onclick="function_cinque()">5</button>
+        <button type="button" id="SEI" onclick="function_sei()">6</button>
+        <button type="button" id="SETTE" onclick="function_sette()">7</button>
+        <button type="button" id="OTTO" onclick="function_otto()">8</button><br>
+        <button type="button" id="NOVE" onclick="function_nove()">9</button>
+        <button type="button" id="ZERO" onclick="function_zero()">0</button><br><br><br>
+        <button type="button" id="PER" onclick="function_per()">x</button>
+        <button type="button" id="DIVISO" onclick="function_diviso()">:</button>
+        <button type="button" id="PIU" onclick="function_piu()">+</button>
+        <button type="button" id="MENO" onclick="function_meno()">-</button>
+        <button type="button" id="TOT" onclick="function_tot()">=</button>
+        <button type="button" id="C" onclick="clear_all()">C</button>
+        <br>
+        <br>
+        <input type="text" id="RISULTATO"></input>
+        <br>
+        <br>
+    </div>
 </body>
-<script type="text/javascript" src="main.js"></script>
 
 </html>

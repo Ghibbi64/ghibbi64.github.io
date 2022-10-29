@@ -3,6 +3,7 @@ var container
 var temp1
 var sign
 var risultato
+var error
 
 function calculate_reload() {
     if (temp1 != "") {
@@ -25,12 +26,18 @@ function calculate_reload() {
 function error_handler() {
     if (container == "Infinity") {
         container = "Impossibile dividere per 0"
+        error = 1
+    } else if (container == "NaN") {
+        container = "Errore"
+        error = 1
     }
 }
 
 function reload(temp1) {
+    if ((document.getElementById("RISULTATO").value != "Errore") && (document.getElementById("RISULTATO").value != "Impossibile dividere per 0")) {
     document.getElementById("RISULTATO").value = container;
     var temp1 = document.getElementById("RISULTATO").value;
+    }
 }
 
 function function_uno() {
@@ -147,10 +154,14 @@ function function_diviso() {
 }
 
 function function_tot() {
-    calculate_reload()
+    if (error != 1) {
+        calculate_reload()
+    }
 }
 
 function clear_all() {
+    document.getElementById("RISULTATO").value = "";
+    error = 0
     temp1 = 0
     container = ""
     risultato = 0

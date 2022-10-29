@@ -1,3 +1,5 @@
+@import 'nib';
+
 head {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -19,6 +21,15 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 30px;
+}
+
+button:hover {
+    box-shadow: 0px 15px 25px -5px #0057ab;
+    transform: scale(1.03);
+}
+button:active {
+    box-shadow: 0px 4px 8px #0065c8;
+    transform: scale(0.98);
 }
 
 #PIU {
