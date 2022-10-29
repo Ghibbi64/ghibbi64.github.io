@@ -1,38 +1,47 @@
 //START SCRIPT
-var container
-var temp1
-var sign
-var risultato
-var error
+var container = [];
+var temp1;
+var sign;
+var risultato;
+var assign;
+var temp_sign;
+var sign_per = "*";
+var sign_div = "/";
+var sign_piu = "+";
+var sign_meno = "-";
+var punto = ".";
 
+/* parte da function_tot, fa i calcoli necessari che verranno 
+caricati nella textbox con reload() */
 function calculate_reload() {
     if (temp1 != "") {
         if (sign == "+") {
-            risultato = (parseInt(temp1)) + (parseInt(container))
+            risultato = parseFloat(temp1) + parseFloat(container);
         } else if (sign == "-") {
-            risultato = (parseInt(temp1)) - (parseInt(container))
+            risultato = parseFloat(temp1) - parseFloat(container);
         } else if (sign == "*") {
-            risultato = (parseInt(temp1)) * (parseInt(container))
+            risultato = parseFloat(temp1) * parseFloat(container);
         } else if (sign == "/") {
-            risultato = (parseInt(temp1)) / (parseInt(container))
+            risultato = parseFloat(temp1) / parseFloat(container);
         }
     }
-    container = risultato.toString()
+    container = risultato.toString();
     error_handler();
-    reload()
-    temp1 = ""
+    reload();
+    temp1 = "";
 }
 
+//parte da calculate_reload, esplicativo
 function error_handler() {
     if (container == "Infinity") {
-        container = "Impossibile dividere per 0"
-        error = 1
+        container = "Impossibile dividere per 0";
     } else if (container == "NaN") {
-        container = "Errore"
-        error = 1
+        container = "Errore";
     }
 }
 
+/* parte da function_assign, function_sign e clear_all
+inserisce i dati della variabile container dentro la textbox */
 function reload(temp1) {
     if ((document.getElementById("RISULTATO").value != "Errore") && (document.getElementById("RISULTATO").value != "Impossibile dividere per 0")) {
     document.getElementById("RISULTATO").value = container;
@@ -40,130 +49,45 @@ function reload(temp1) {
     }
 }
 
-function function_uno() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "1")
-    } else container = "1"
-    reload()
-}
-
-function function_due() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "2")
-    } else container = "2"
-    reload()
-}
-
-function function_tre() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "3")
-    } else container = "3"
-    reload()
-}
-
-function function_quattro() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "4")
-    } else container = "4"
-    reload()
-}
-
-function function_cinque() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "5")
-    } else container = "5"
-    reload()
-}
-
-function function_sei() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "6")
-    } else container = "6"
-    reload()
-}
-
-function function_sette() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "7")
-    } else container = "7"
-    reload()
-}
-
-function function_otto() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "8")
-    } else container = "8"
-    reload()
-}
-
-function function_nove() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "9")
-    } else container = "9"
-    reload()
-}
-
-function function_zero() {
-    console.log("ciao")
-    if (container != undefined) {
-        container = (container + "0")
-    } else container = "0"
-    reload()
-}
-
-
-function function_piu() {
-    console.log("ciao")
-    temp1 = container
-    container = ""
-    sign = "+"
+//funzione far registrare i numeri dall'html
+function function_assign(assign) {
+    assign = String(assign);
+    console.log(assign);
+    if (container != undefined) { //check per vedere se container è vuoto o meno all'aggiunta dei dati
+        container = (container + assign);
+    } else container = assign;
     reload();
 }
 
-function function_meno() {
-    console.log("meno")
-    temp1 = container
-    container = ""
-    sign = "-"
+//funzione per far registrare i segni dall'html
+function function_sign(temp_sign) {
+    console.log(temp_sign);
+    temp1 = container;
+    container = "";
+    sign = temp_sign;
     reload();
-}
-
-function function_per() {
-    console.log("ciao")
-    temp1 = container
-    container = ""
-    sign = "*"
-    reload();
-}
-
-function function_diviso() {
-    console.log("ciao")
-    temp1 = container
-    container = ""
-    sign = "/"
-    reload();
-}
-
-function function_tot() {
-    if (error != 1) {
-        calculate_reload()
-    }
 }
 
 function clear_all() {
     document.getElementById("RISULTATO").value = "";
-    error = 0
-    temp1 = 0
-    container = ""
-    risultato = 0
+    temp1 = 0;
+    container = "";
+    risultato = 0;
     reload();
 }
+
+document.onkeydown = function (e) {
+    console.log(e.key)
+    if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4" || e.key == "5" || e.key == "6" || e.key == "7" || e.key == "8" || e.key == "9" || e.key == "0" || e.key == "."){
+        function_assign(e.key);
+    } else if (e.key == "*" || e.key == "/" || e.key == "+" || e.key == "-") {
+        function_sign(e.key);
+    } else if (e.key == "Enter") {
+        calculate_reload();
+    } else if (e.key == "c" || e.key == "C") {
+        clear_all();
+    } else if (e.key == "Backspace") {
+        container = container.slice(0, container.length-1);
+        reload();
+    }
+  };

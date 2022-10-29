@@ -12,9 +12,8 @@ body {
 }
 
 button {
+    /*green*/
     background-color: #4CAF50;
-    /* Green */
-    border: ;
     color: white;
     padding: 15px 26px;
     text-align: center;
@@ -24,7 +23,7 @@ button {
 }
 
 button:hover {
-    box-shadow: 0px 15px 25px -5px #0057ab;
+    box-shadow: 0px 15px 25px -18px #0057ab;
     transform: scale(1.03);
 }
 button:active {
@@ -32,58 +31,9 @@ button:active {
     transform: scale(0.98);
 }
 
-#PIU {
+.operandi {
     background-color: #4a3364;
     /* Purple */
-    border: ;
-    color: white;
-    padding: 11px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 22px;
-}
-
-#DIVISO {
-    background-color: #4a3364;
-    /* Purple */
-    border: ;
-    color: white;
-    padding: 11px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 22px;
-}
-
-#MENO {
-    background-color: #4a3364;
-    /* Purple */
-    border: ;
-    color: white;
-    padding: 11px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 22px;
-}
-
-#PER {
-    background-color: #4a3364;
-    /* Purple */
-    border: ;
-    color: white;
-    padding: 11px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 22px;
-}
-
-#TOT {
-    background-color: #4a3364;
-    /* Purple */
-    border: ;
     color: white;
     padding: 11px 20px;
     text-align: center;
@@ -96,10 +46,10 @@ button:active {
     /* Purple */
     background-color: rgb(193, 218, 240);
     padding: 11px 20px;
-    text-align: center;
+    text-align: right;
     text-decoration: none;
     display: inline-block;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 #C {
@@ -113,3 +63,4 @@ button:active {
     display: inline-block;
     font-size: 22px;
 }
+
