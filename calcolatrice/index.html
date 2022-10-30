@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="stile.css">
+    <script type="text/javascript" src="main.js"></script>
+
+</head>
+
+
+<body>
+    <div style="text-align:center;width: 400px;margin: 0 auto;border-style:ridge;">
+        <h1>CALCOLATRICE</h1>
+        <input type="text" readonly="readonly" id="RISULTATO" maxlength="20"></input>
+        <br><br>
+        <button type="button" id="UNO" onclick="function_assign(1)">1</button>
+        <button type="button" id="DUE" onclick="function_assign(2)">2</button>
+        <button type="button" id="TRE" onclick="function_assign(3)">3</button><br>
+        <button type="button" id="QUATTRO" onclick="function_assign(4)">4</button>
+        <button type="button" id="CINQUE" onclick="function_assign(5)">5</button>
+        <button type="button" id="SEI" onclick="function_assign(6)">6</button><br>
+        <button type="button" id="SETTE" onclick="function_assign(7)">7</button>
+        <button type="button" id="OTTO" onclick="function_assign(8)">8</button>
+        <button type="button" id="NOVE" onclick="function_assign(9)">9</button><br>
+        <button type="button" id="ZERO" onclick="function_assign(0)">0</button>
+        <button type="button" id="PUNTO" onclick="function_assign(punto)">.</button><br><br>
+        <button type="button" class="operandi" id="PER" onclick="function_sign(sign_per)">x</button>
+        <button type="button" class="operandi" id="DIVISO" onclick="function_sign(sign_div)">:</button>
+        <button type="button" class="operandi" id="PIU" onclick="function_sign(sign_piu)">+</button>
+        <button type="button" class="operandi" id="MENO" onclick="function_sign(sign_meno)">-</button>
+        <button type="button" class="operandi" id="TOT" onclick="calculate_reload()">=</button>
+        <button type="button" id="C" onclick="clear_all()">C</button>
+        <br><br>
+    </div>
+</body>
+
+</html>
