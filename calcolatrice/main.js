@@ -16,13 +16,13 @@ caricati nella textbox con reload() */
 function calculate_reload() {
     if (temp1 != "") {
         if (sign == "+") {
-            risultato = parseFloat(temp1) + parseFloat(container);
+            risultato = BigInt(temp1) + BigInt(container);
         } else if (sign == "-") {
-            risultato = parseFloat(temp1) - parseFloat(container);
+            risultato = BigInt(temp1) - BigInt(container);
         } else if (sign == "*") {
-            risultato = parseFloat(temp1) * parseFloat(container);
+            risultato = BigInt(temp1) * BigInt(container);
         } else if (sign == "/") {
-            risultato = parseFloat(temp1) / parseFloat(container);
+            risultato = BigInt(temp1) / BigInt(container);
         }
     }
     container = risultato.toString();
