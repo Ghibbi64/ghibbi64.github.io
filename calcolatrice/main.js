@@ -51,12 +51,14 @@ function reload(temp1) {
 
 //funzione far registrare i numeri dall'html
 function function_assign(assign) {
-    assign = String(assign);
-    console.log(assign);
-    if (container != undefined) { //check per vedere se container è vuoto o meno all'aggiunta dei dati
-        container = (container + assign);
-    } else container = assign;
-    reload();
+        if (!(container > 15)) {
+        assign = String(assign);
+        console.log(assign);
+        if (container != undefined) { //check per vedere se container è vuoto o meno all'aggiunta dei dati
+            container = (container + assign);
+        } else container = assign;
+        reload();
+    } else console.log("Limite caratteri raggiunto")
 }
 
 //funzione per far registrare i segni dall'html
