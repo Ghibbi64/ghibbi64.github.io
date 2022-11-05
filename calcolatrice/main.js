@@ -10,6 +10,7 @@ var sign_div = "/";
 var sign_piu = "+";
 var sign_meno = "-";
 var punto = ".";
+var chiave = "";
 
 /* parte da function_tot, fa i calcoli necessari che verranno 
 caricati nella textbox con reload() */
@@ -86,10 +87,16 @@ document.onkeydown = function (e) {
         function_sign(e.key);
     } else if (e.key == "Enter") {
         calculate_reload();
+        if (chiave == "amongus") {
+            container = "SUS";
+            reload();
+        }
     } else if (e.key == "c" || e.key == "C") {
         clear_all();
     } else if (e.key == "Backspace") {
         container = container.slice(0, container.length-1);
         reload();
+    } else if ((e.key == "a") || (e.key == "m") || (e.key == "o") || (e.key == "n") || (e.key == "g") || (e.key == "u") || (e.key == "s")) {
+        chiave = chiave + key.e;
     }
-  };
+  }
