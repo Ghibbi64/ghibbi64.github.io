@@ -8,18 +8,35 @@
     <link rel="stylesheet" href="stile.css">
     <script src="script.js"></script>
 </head>
-<body>
-    <button class="opt" type="button" id="button_opt">&#9881;</button>
-    <div id="TITOLO">
-        <h1>Ghibbi64 Testing Website</h1>
-        <h2>Main Page</h2>
+<body id="body">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Prima voce</a>
+        <a href="#">Seconda voce</a>
+        <a href="#">Terza voce</a>
+        <a href="#">Quarta voce</a>
+      </div>
+    <div id="main"> 
+        <button class="opt" type="button" id="button_opt">
+            <span onclick="openNav()">&#9881;</span>
+        </button>
+        <div id="TITOLO">
+            <h1>Ghibbi64 Testing Website</h1>
+            <h2>Testing page</h2>
+        </div>
+        <br><br>
+        <p>Vai a:</p>
+        <button type="button" id="button_calc" onclick="location.href = './calcolatrice'">CALCOLATRICE</button><br><br>
+        <button type="button" id="button_cmgsn" onclick="changeBkgColor()">CAMBIA SFONDO IN ROSSO</button><br><br>
+        <button type="button" id="button_cmgsn" class="popup" onclick="showPopup()">BUTTON POPUP TEST
+            <span class="popuptext" id="myPopup">Funziona</span>
+        </button><br><br>
+        <button type="button" id="button_cmgsn">COMING SOON</button><br><br>
+        <p class="commenti">(when the moon hits the sky like a big pizza pie, it's OMORI)</p>
+        <br><br><br>
+        <div class="popup" onclick="showPopup()">Popup test, cliccami per attivarlo!
+            <span class="popuptext" id="myPopup">Funziona</span>
+        </div>
     </div>
-    <br><br>
-    <p>Vai a:</p>
-    <button type="button" id="button_calc" onclick="location.href = './calcolatrice'">CALCOLATRICE</button><br><br>
-    <button type="button" id="button_cmgsn">COMING SOON</button><br><br>
-    <button type="button" id="button_cmgsn">COMING SOON</button><br><br>
-    <button type="button" id="button_cmgsn">COMING SOON</button><br>
-    <p class="commenti">(when the moon hits the sky like a big pizza pie, it's OMORI)</p>
 </body>
 </html>
