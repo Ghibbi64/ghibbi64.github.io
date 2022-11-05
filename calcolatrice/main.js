@@ -51,7 +51,7 @@ function reload(temp1) {
 
 //funzione far registrare i numeri dall'html
 function function_assign(assign) {
-        if (!(container > 15)) {
+    if (!(container > 15)) {
         assign = String(assign);
         console.log(assign);
         if (container != undefined) { //check per vedere se container è vuoto o meno all'aggiunta dei dati
