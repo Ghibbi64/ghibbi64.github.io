@@ -10,6 +10,7 @@ var sign_div = "/";
 var sign_piu = "+";
 var sign_meno = "-";
 var punto = ".";
+var chiave = "";
 
 /* parte da function_tot, fa i calcoli necessari che verranno 
 caricati nella textbox con reload() */
@@ -51,12 +52,14 @@ function reload(temp1) {
 
 //funzione far registrare i numeri dall'html
 function function_assign(assign) {
-    assign = String(assign);
-    console.log(assign);
-    if (container != undefined) { //check per vedere se container è vuoto o meno all'aggiunta dei dati
-        container = (container + assign);
-    } else container = assign;
-    reload();
+    if (!(container.length > 15)) {
+        assign = String(assign);
+        console.log(assign);
+        if (container != undefined) { //check per vedere se container è vuoto o meno all'aggiunta dei dati
+            container = (container + assign);
+        } else container = assign;
+        reload();
+    } else console.log("Limite caratteri raggiunto")
 }
 
 //funzione per far registrare i segni dall'html
@@ -84,10 +87,15 @@ document.onkeydown = function (e) {
         function_sign(e.key);
     } else if (e.key == "Enter") {
         calculate_reload();
+        if (chiave == "amongus") {
+            document.getElementById("RISULTATO").value = "SUS";
+        }
     } else if (e.key == "c" || e.key == "C") {
         clear_all();
     } else if (e.key == "Backspace") {
         container = container.slice(0, container.length-1);
         reload();
+    } else if ((e.key == "a") || (e.key == "m") || (e.key == "o") || (e.key == "n") || (e.key == "g") || (e.key == "u") || (e.key == "s")) {
+        chiave = chiave + e.key;
     }
-  };
+  }
