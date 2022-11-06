@@ -86,10 +86,10 @@ document.onkeydown = function (e) {
     } else if (e.key == "*" || e.key == "/" || e.key == "+" || e.key == "-") {
         function_sign(e.key);
     } else if (e.key == "Enter") {
-        calculate_reload();
         if (chiave == "amongus") {
             document.getElementById("RISULTATO").value = "SUS";
-        }
+            chiave = "";
+        } else calculate_reload();
     } else if (e.key == "c" || e.key == "C") {
         clear_all();
     } else if (e.key == "Backspace") {
