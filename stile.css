@@ -1,26 +1,28 @@
 body {
-    background-color: #faebd7;
+    background-color:#faebd7;
 }
 #TITOLO {
-    text-align: center;
+    text-align:center;
 }
 p {
-    font-size: 22px;
+    font-size:22px;
 }
 button {
     background-color:aliceblue;
-    color: black;
-    padding: 10px 15px;
-    text-align: center;
-    display: inline-block;
-    font-size: 13px;
+    color:black;
+    padding:10px 15px;
+    text-align:center;
+    display:inline-block;
+    font-size:13px;
 }
 .commenti {
-    font-size: 18px;
+    font-size:18px;
 }
 .opt {
-    padding: 6px 10px;
-    font-size: 20px;
+    padding:6px 10px;
+    font-size:30px;
+    border:none;
+    background-color:transparent;
 }
 /*____________________________________________________________________*/
 /* Popup container */
