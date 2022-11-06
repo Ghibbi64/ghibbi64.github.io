@@ -3,6 +3,20 @@ body {
 }
 #TITOLO {
     text-align:center;
+    display:block;
+    float: none;
+}
+#div_opzioni{
+    float:left;
+    text-align:left;
+    display:block;
+}
+#opzioni {
+  padding:6px 10px;
+  font-size:30px;
+  border:none;
+  background-color:transparent;
+  cursor:pointer;
 }
 p {
     font-size:22px;
@@ -17,12 +31,6 @@ button {
 }
 .commenti {
     font-size:18px;
-}
-.opt {
-    padding:6px 10px;
-    font-size:30px;
-    border:none;
-    background-color:transparent;
 }
 /*____________________________________________________________________*/
 /* Popup container */
