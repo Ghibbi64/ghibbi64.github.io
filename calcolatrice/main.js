@@ -76,6 +76,7 @@ function clear_all() {
     temp1 = 0;
     container = "";
     risultato = 0;
+    chiave = "";
     reload();
 }
 
