@@ -5,8 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password generator</title>
+    <link rel="stylesheet" href="stile.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    
+    <h1 id="title">GENERATORE DI PASSWORD</h1>
+    <br>
+    <input type="checkbox" id="checkbox1">Lettere maiuscole</input><br><br>
+    <input type="checkbox" id="checkbox2">Numeri</input><br><br>
+    <input type="checkbox" id="checkbox3">Caratteri speciali</input><br><br>
+    <p>Inserisci il numero di caratteri della password:</p><input id="lunghezza"></input><br><br>
+    <button id="controllo" onclick="genera()">GENERA</button><br><br>
+    <input type="text" readonly="readonly" id="RISULTATO"></input>
 </body>
 </html>
