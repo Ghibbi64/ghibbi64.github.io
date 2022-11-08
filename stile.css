@@ -4,7 +4,6 @@ body {
 #TITOLO {
     text-align:center;
     display:block;
-    float: none;
 }
 #div_opzioni{
     float:left;
