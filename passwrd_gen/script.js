@@ -20,34 +20,22 @@ window.onload = function() {
 
 function genera() {
     document.getElementById("RISULTATO").value = "";
-    if (checkbox1.checked) {
-        console.log("LETTERE MAIUSCOLE");
-        checkbox1 = true;
-    } else checkbox1 = false;
-    if (checkbox2.checked) {
-        console.log("NUMERI");
-        checkbox2 = true;
-    } else checkbox2 = false;
-    if (checkbox3.checked) {
-        console.log("CARATTERI SPECIALI");
-        checkbox3 = true;
-    } else checkbox3 = false;
     lunghezza = parseInt(document.getElementById("lunghezza").value);
-
     //crea stringa completa
-    stringaFinale = caratteriMinuscoli;
-    if (checkbox1) {
+    stringaFinale = [].concat(caratteriMinuscoli);
+    if (checkbox1.checked) {
         stringaFinale = [].concat(stringaFinale, caratteriMaiuscoli);
+        console.log(stringaFinale)
     }
-    if (checkbox2) {
+    if (checkbox2.checked) {
         stringaFinale = [].concat(stringaFinale, caratteriNumeri);
+        console.log(stringaFinale)
     }
-    if (checkbox3) {
+    if (checkbox3.checked) {
         stringaFinale = [].concat(stringaFinale, caratteriSpeciali);
+        console.log(stringaFinale)
     }
-
     //genera stringa
-
     while (!(lunghezza == 0)) {
         let temp1;
         temp1 = parseInt(Math.random() * (stringaFinale.length));
@@ -55,7 +43,6 @@ function genera() {
         lunghezza = lunghezza - 1;
     }
     document.getElementById("RISULTATO").value = password;
-
     password = "";
     stringaFinale = [];
 }

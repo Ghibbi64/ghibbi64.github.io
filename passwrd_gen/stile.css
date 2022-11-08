@@ -5,3 +5,10 @@ body {
 #title {
     text-align: center;
 }
+
+#RISULTATO {
+    text-align: left;
+    width: 10cm;
+    display: inline-block;
+    font-size: 17px;
+}
