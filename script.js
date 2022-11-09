@@ -27,3 +27,21 @@ function openNav() {
       colorCheck = 0;
     }
   }
+
+  var i = 0
+
+setInterval(function() {
+    i++
+    if (i == 1)
+        document.getElementById("Ciao").value = "Test";
+    else if (i == 2)
+        document.getElementById("Ciao").value = " Tes";
+    else if (i == 3)
+        document.getElementById("Ciao").value = "t Te";
+    else if (i == 4) 
+        document.getElementById("Ciao").value = "st T";
+    else {
+        document.getElementById("Ciao").value = "est ";
+        i = 0;
+    }
+}, 400)
