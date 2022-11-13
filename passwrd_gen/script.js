@@ -11,7 +11,6 @@ let caratteriMinuscoli = caratteriMaiuscoli.map(element => {
   });
 let password = "";
 
-console.log(caratteriMinuscoli)
 window.onload = function() {
   checkbox1 = document.getElementById("checkbox1");
   checkbox2 = document.getElementById("checkbox2");
@@ -19,21 +18,22 @@ window.onload = function() {
 };
 
 function genera() {
+    if (document.getElementById("lunghezza").value == ''){
+        console.log("errore")
+        return 0;
+    }
     document.getElementById("RISULTATO").value = "";
     lunghezza = parseInt(document.getElementById("lunghezza").value);
     //crea stringa completa
     stringaFinale = [].concat(caratteriMinuscoli);
     if (checkbox1.checked) {
         stringaFinale = [].concat(stringaFinale, caratteriMaiuscoli);
-        console.log(stringaFinale)
     }
     if (checkbox2.checked) {
         stringaFinale = [].concat(stringaFinale, caratteriNumeri);
-        console.log(stringaFinale)
     }
     if (checkbox3.checked) {
         stringaFinale = [].concat(stringaFinale, caratteriSpeciali);
-        console.log(stringaFinale)
     }
     //genera stringa
     while (!(lunghezza == 0)) {
@@ -43,6 +43,8 @@ function genera() {
         lunghezza = lunghezza - 1;
     }
     document.getElementById("RISULTATO").value = password;
+    document.getElementById("RISULTATO").style.width = String(password.length/3)+'cm'
+    console.log("Lunghezza impostata a " + document.getElementById("RISULTATO").style.width);
     password = "";
     stringaFinale = [];
 }
