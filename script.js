@@ -1,5 +1,8 @@
 var nomePopup;
 var colorCheck = 0;
+var array1 = [];
+var lunghezzaArray;
+var i = 0
 
 function showPopup(nomePopup) {
     var popup = document.getElementById(nomePopup);
@@ -28,20 +31,17 @@ function openNav() {
     }
   }
 
-  var i = 0
 
+//SCRITTA CHE SI AGGIORNA
+temp1 = "This is a simple test";
+const myArray = temp1.split("");
 setInterval(function() {
-    i++
-    if (i == 1)
-        document.getElementById("Ciao").value = "Test";
-    else if (i == 2)
-        document.getElementById("Ciao").value = " Tes";
-    else if (i == 3)
-        document.getElementById("Ciao").value = "t Te";
-    else if (i == 4) 
-        document.getElementById("Ciao").value = "st T";
-    else {
-        document.getElementById("Ciao").value = "est ";
-        i = 0;
-    }
-}, 400)
+  if (document.getElementById("Ciao").value == temp1) {
+    i = 0
+    document.getElementById("Ciao").value = "";
+  }
+  
+  document.getElementById("Ciao").value = document.getElementById("Ciao").value + myArray[i];
+  i++;
+}, 300)
+//_______________________________________________________________
